@@ -1,0 +1,13 @@
+- name: frontend
+  hosts: all
+  tasks:  
+    - name: disable default nginx
+      ansible.builtin.shell: dnf module disable nginx -y
+
+    - name: enable nginx 24
+      ansible.builtin.shell: dnf module enable nginx:24 -y 
+
+    - name: install nginx
+      ansible.builtin.dnf:
+        name: nginx
+        state: present
