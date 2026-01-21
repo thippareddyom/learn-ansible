@@ -5,3 +5,16 @@
   - name: debug
     ansible.builtin.debug:
       msg: "Hello" 
+    
+# a: 10
+# b: [99,99]
+# c:
+#   - 99
+#   - 99
+# d:
+#   course: DevOps
+#   time: 888
+# e: {
+# course: DevOps
+# time: 777
+# }
