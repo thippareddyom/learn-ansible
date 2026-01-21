@@ -1,5 +1,6 @@
 - name: test
-  hosts: all
+  hosts: localhost
+  connection: local
   tasks:
   - name: debug
     ansible.builtin.debug:
