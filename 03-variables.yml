@@ -10,3 +10,19 @@
       ansible.builtin.debug:
         msg: "{{ URL  }}"
   
+
+- name: Task variables
+  hosts: localhost
+  connection: local
+  tasks:
+    - name: print URL
+      ansible.builtin.debug:
+        msg: {{ URL }}
+      vars:
+        URL: task.level
+
+- name: role variables
+  hosts: localhost
+  connection: local
+  roles:
+    - demo
