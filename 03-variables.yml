@@ -1,0 +1,10 @@
+- name: sample
+  hosts: localhost
+  connection: local
+  vars:
+    URL: play.google.com
+  tasks:
+    - name: print url
+      ansible.builtin.debug:
+        msg: "{{ URL  }}"
+  
